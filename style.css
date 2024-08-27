@@ -1,0 +1,784 @@
+/* Reset and basic styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-info {
+    text-align: left;
+    flex-grow: 1;
+}
+
+.header-title {
+    margin-bottom: 10px;
+}
+
+.header-title h1 {
+    margin: 0;
+    font-size: 2.5em;
+    line-height: 1.2;
+}
+
+.header-title p {
+    margin: 5px 0;
+    font-size: 1.1em;
+    color: #bdc3c7;
+}
+
+.contact-links {
+    display: flex;
+    align-items: center;
+}
+
+.contact-links a {
+    display: inline-block;
+    color: #1abc9c;
+    text-decoration: none;
+    font-size: 2em;
+    margin-right: 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-links a:hover {
+    color: #16a085;
+    transform: scale(1.1);
+}
+
+.header-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+section {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #2c3e50;
+}
+
+/* Dropdown content styles */
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.content.open {
+    max-height: 500px; /* Adjust as necessary */
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    font-size: 1.1em;
+    cursor: pointer;
+    color: #2c3e50;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.toggle-btn:hover {
+    color: #34495e;
+}
+
+.toggle-btn .material-icons {
+    vertical-align: middle;
+}
+
+.toggle-btn.open .material-icons {
+    transform: rotate(180deg);
+}
+
+.about-text p,
+.job,
+.project,
+.skill {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.education-item {
+    opacity: 0;
+    transform: translateY(20px); /* Adjust the initial position if needed */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.about-text.open p,
+.job.animated,
+.project.animated,
+.skill.animated,
+.education-item.animated{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-text {
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: justify;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-text span {
+    color: #1abc9c;
+    font-weight: bold;
+}
+
+#projects-content {
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.project {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.skill {
+    margin-bottom: 15px;
+}
+
+.progress-bar {
+    background-color: #eee;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+    width: 100%;
+    position: relative;
+}
+
+.progress {
+    background-color: #1abc9c;
+    height: 100%;
+    width: 0;
+    transition: width 2s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+}
+
+.skill span {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Adjust progress bar colors */
+.skill:nth-child(odd) .progress {
+    background-color: #16a085;
+}
+
+.skill:nth-child(3n) .progress {
+    background-color: #2ecc71;
+}
+
+.skill:nth-child(4n) .progress {
+    background-color: #1e8f8c;
+}
+
+.skill:nth-child(5n) .progress {
+    background-color: #17a589;
+}
+
+/* Contact Section */
+#contact {
+    margin-top: 40px; /* Increased margin for spacing */
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f4f8; /* Soft light background for the contact section */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+    font-size: 2.5em; /* Increased size for prominence */
+    color: #2c3e50; /* Dark color for better contrast */
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif; /* Modern font */
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contact-list li {
+    margin: 10px 20px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: #ffffff; /* Light background for the list items */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-list li:hover {
+    background: #e8f0fe; /* Soft blue shade on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.contact-list li svg {
+    margin-right: 15px;
+    fill: #3498db; /* Blue color for icons */
+    width: 28px;
+    height: 28px;
+}
+
+.contact-list li a {
+    color: #3498db; /* Blue color for links */
+    text-decoration: none;
+    font-size: 1.1em;
+    font-family: 'Arial', sans-serif;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.contact-list li a:hover {
+    color: #2980b9; /* Darker blue shade on hover */
+    text-decoration: underline;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Adding the location */
+#contact .location {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #7f8c8d; /* Light grey color for the location */
+}
+
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contact-list i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.contact-list a {
+    text-decoration: none;
+    color: #000;
+}
+
+.contact-list a:hover {
+    text-decoration: underline;
+}
+
+#screenshot-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+#screenshot-button:hover {
+    background-color: #0056b3;
+}
+
+#screenshot-button .fas {
+    margin-right: 10px;
+}
+
+/* Modal styling */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px); /* Adds a blurred effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Modal content styling */
+.modal-content {
+    position: relative;
+    background: white;
+    padding: 20px;
+    border-radius: 12px; /* Increased border radius */
+    width: 80%;
+    max-width: 900px;
+    height: auto;
+    max-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Added shadow */
+}
+
+/* Image transition styles */
+.modal-images {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.modal-image {
+    width: 100%;
+    height: auto;
+    max-height: calc(80vh - 40px);
+    object-fit: contain;
+    display: block;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.modal-image.fade-out {
+    opacity: 0;
+}
+
+.modal-image.slide-in {
+    transform: translateX(0);
+}
+
+.modal-image.slide-out {
+    transform: translateX(100%); /* Adjusted for smoother transition */
+}
+
+/* Navigation buttons styling */
+.modal-prev,
+.modal-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 48px;
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6); /* Darker background */
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 10;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.modal-prev:hover,
+.modal-next:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* Lighter on hover */
+    color: black;
+}
+
+.modal-prev {
+    left: 20px;
+}
+
+.modal-next {
+    right: 20px;
+}
+
+/* Close button styling */
+.modal-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6); /* Darker background */
+    padding: 5px;
+    border-radius: 50%;
+    z-index: 10;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.modal-close-btn:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* Lighter on hover */
+    color: black;
+}
+
+
+
+#graphics-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    height: 500px; /* Fixed height for the portfolio section */
+    overflow-y: auto; /* Enables vertical scrolling */
+    padding-right: 10px; /* Space for scrollbar */
+}
+
+/* Each album card should be of the same size and fit horizontally */
+.album {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    width: calc(25% - 20px); /* Fit 4 albums in one row, subtracting gap */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    order: 2; /* Default order for all albums */
+}
+
+/* Newly added album to be centered */
+.album.new {
+    order: 1; /* New album comes before the older ones */
+}
+
+/* Album headings and content alignment */
+.album h3 {
+    margin: 0;
+    font-size: 1.5em;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #2c3e50;
+}
+
+/* Container for scrollable images */
+.album-images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto; /* Make images scrollable vertically */
+    max-height: 300px; /* Adjust height as needed */
+}
+
+/* Style for each image */
+.album-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for images */
+.album-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Base styles for mobile */
+@media (max-width: 768px) {
+    /* Header adjustments */
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-info {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .contact-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centers the items horizontally */
+    align-items: center; /* Aligns the items vertically */
+}
+
+    .contact-links a {
+        margin-bottom: 10px;
+    }
+
+    .header-image img {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* Section adjustments */
+    section {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    /* Dropdown content styles */
+    .content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease, opacity 0.5s ease;
+        opacity: 0; /* Hide content by default */
+    }
+
+    .content.open {
+        max-height: 400px; /* Adjust based on the content */
+        overflow-y: auto; /* Enable vertical scrolling */
+        opacity: 1; /* Show content when open */
+    }
+
+    /* Graphics section adjustments */
+    #graphics-content {
+        display: flex;
+        flex-direction: row; /* Stack albums horizontally */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        gap: 20px; /* Space between albums */
+        padding: 10px; /* Add some padding */
+    }
+
+    .album {
+        flex: 0 0 auto; /* Prevent albums from shrinking */
+        width: 300px; /* Adjust width as needed */
+        display: flex;
+        flex-direction: column;
+        gap: 10px; /* Space between images */
+        transition: opacity 0.5s ease; /* Smooth transition for visibility */
+        opacity: 0; /* Hide album by default */
+    }
+
+    .content.open .album {
+        opacity: 1; /* Show album when content is open */
+    }
+
+    .album h3 {
+        font-size: 1.2em; /* Adjust album title size */
+    }
+
+    .album-images {
+        display: flex;
+        flex-direction: column; /* Ensure vertical layout for images */
+        gap: 10px; /* Space between images */
+    }
+
+    .album-image {
+        width: 100%; /* Ensure images fit within container */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Ensure all albums are visible */
+    .album-container {
+        overflow: auto; /* Enable scrolling if needed */
+    }
+
+    /* Modal adjustments */
+    .modal-content {
+        width: 90%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .modal-image {
+        max-height: calc(80vh - 40px);
+    }
+
+    #screenshot-button {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto; /* Center horizontally */
+        padding: 10px 20px; /* Adjust padding for better touch support */
+        font-size: 1em; /* Ensure text is legible */
+    }
+}
+
+
+/* Extra-small devices */
+@media (max-width: 480px) {
+    .header-title h1 {
+        font-size: 1.8em;
+    }
+
+    .header-title p {
+        font-size: 1em;
+    }
+
+    .contact-links a {
+        font-size: 1.5em;
+    }
+
+    .about-text {
+        font-size: 1em;
+    }
+
+    .progress-bar {
+        height: 15px;
+    }
+
+    .progress {
+        height: 100%;
+    }
+
+    .album-image {
+        width: 100%; /* Ensure images fit within container */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Modal close and navigation buttons */
+    .modal-close-btn,
+    .modal-prev,
+    .modal-next {
+        font-size: 36px;
+    }
+}
+
+.location-icon {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+    color: #1abc9c; /* Icon color */
+    font-size: 24px; /* Adjust size as needed */
+    transition: color 0.3s;
+}
+
+.location-icon:hover {
+    color: #16a085; /* Darker shade on hover */
+}
+
+/* Base styles for the floating menu */
+.floating-menu {
+    position: fixed;
+    top: 50%;
+    right: 10px; /* Adjust to control spacing from the right edge */
+    transform: translateY(-50%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Added shadow effect */
+    border-radius: 15px;
+    padding: 10px;
+    background-color: #ffffff; /* Adds a background to the entire menu */
+}
+
+/* Styling for menu items */
+.menu-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #76c7c0;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Added smooth scaling */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Added individual item shadow */
+}
+
+.menu-item:hover {
+    background-color: #93e4d3;
+    transform: scale(1.1); /* Scales up the icon slightly on hover */
+}
+
+.tooltip {
+    position: absolute;
+    top: 50%;
+    left: -100px; /* Adjusted position to be more centered */
+    transform: translateY(-50%);
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Added shadow to the tooltip */
+}
+
+.menu-item:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+.material-icons {
+    font-size: 28px; /* Slightly increased icon size */
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .floating-menu {
+        right: 5px; /* Adjust spacing from the right edge for smaller screens */
+        width: 50px; /* Adjust width if necessary */
+        height: auto; /* Allow height to adjust based on content */
+        padding: 8px; /* Adjust padding as needed */
+    }
+
+    .menu-item {
+        width: 50px; /* Adjust size of menu items */
+        height: 50px; /* Adjust size of menu items */
+        font-size: 20px; /* Adjust icon size */
+    }
+
+    .tooltip {
+        left: -90px; /* Adjust tooltip position */
+    }
+}
+
+@media (max-width: 480px) {
+    .floating-menu {
+        right: 5px; /* Keep consistent spacing from the right edge */
+        width: 40px; /* Adjust width if necessary */
+        height: auto; /* Allow height to adjust based on content */
+        padding: 6px; /* Adjust padding as needed */
+    }
+
+    .menu-item {
+        width: 40px; /* Adjust size of menu items */
+        height: 40px; /* Adjust size of menu items */
+        font-size: 18px; /* Adjust icon size */
+    }
+
+    .tooltip {
+        left: -70px; /* Adjust tooltip position */
+    }
+}
+
+
+.highlight {
+    color: #FF5733; /* Example color, you can choose any color */
+    font-weight: bold;
+}

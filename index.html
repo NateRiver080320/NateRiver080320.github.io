@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Include html2canvas and jsPDF libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+    
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-info">
+                <div class="header-title">
+                    <h1 style="color: white;">Jan Orestes Trinidad</h1>
+                    <p>Multimedia Specialist</p>
+                    <p>Web Developer | Video Editor | Graphic Artist</p>
+                    <p>Passionate about creating impactful multimedia experiences.</p>
+                </div>
+                <div class="contact-links">
+                    <a href="mailto:janorestestrinidad@gmail.com"><span class="material-icons">email</span></a>
+                    <a href="https://www.facebook.com/Jigeee/" target="_blank"><span class="material-icons">account_circle</span></a>
+                    <a href="#contact"><span class="material-icons">phone_android</span></a>
+                </div>
+                <button id="screenshot-button"><i class="fas fa-file-pdf"></i>Print to PDF</button>
+            </div>
+            <div class="header-image">
+            </div>
+        </div>
+    </header>
+        <div class="floating-menu">
+            <div class="menu-item" data-target="#about">
+                <span class="material-icons">person</span>
+                <div class="tooltip">About Me</div>
+            </div>
+            <div class="menu-item" data-target="#education">
+                <span class="material-icons">school</span>
+                <div class="tooltip">Education</div>
+            </div>
+            <div class="menu-item" data-target="#experience">
+                <span class="material-icons">work</span>
+                <div class="tooltip">Experience</div>
+            </div>
+            <div class="menu-item" data-target="#skills">
+                <span class="material-icons">build</span>
+                <div class="tooltip">Skills</div>
+            </div>
+            <div class="menu-item" data-target="#projects">
+                <span class="material-icons">assignment</span>
+                <div class="tooltip">Projects</div>
+            </div>
+            <div class="menu-item" data-target="#graphics">
+                <span class="material-icons">palette</span>
+                <div class="tooltip">Graphics Portfolio</div>
+            </div>
+        </div>
+
+    <main id="main-content">
+        <section id="about">
+            <h2>About Me <button class="toggle-btn" data-target="about-content"><span class="material-icons">expand_more</span></button></h2>
+            <div class="content" id="about-content">
+                <div class="about-text">
+                    <p>I am <span style="font-weight: bold; color: #76c7c0;">Jan Orestes Trinidad</span>, a <span style="color: #93e4d3;">Multimedia Specialist</span> with extensive experience in <span style="color: #76c7c0;">web development</span>, <span style="color: #76c7c0;">video editing</span>, and <span style="color: #76c7c0;">graphic artistry</span>.</p>
+                    <p>I worked at <span style="font-weight: bold; color: #76c7c0;">Brain IT Consultancy</span> in Santiago City, Isabela, Philippines, from 2018 until the end of March 2024, serving as a <span style="color: #76c7c0;">Web Developer</span> and <span style="color: #76c7c0;">Computer System Engineer</span>. In this role, I specialized in <span style="color: #76c7c0;">testing</span>, <span style="color: #76c7c0;">front-end development</span>, <span style="color: #76c7c0;">CSS</span>, and <span style="color: #76c7c0;">JavaScript</span>. Additionally, I worked with frameworks like <span style="color: #76c7c0;">Laravel</span> and <span style="color: #76c7c0;">CakePHP</span>, and managed databases using <span style="color: #76c7c0;">phpMyAdmin with XAMPP</span>.</p>
+                    <p>Furthermore, I have a passion for creating impactful multimedia experiences through digital artistry in <span style="font-weight: bold; color: #76c7c0;">Photoshop</span>, where I create detailed and engaging visuals. As a freelance graphic artist, I excel in <span style="color: #76c7c0;">digital art</span> and <span style="color: #76c7c0;">video editing</span> using tools like Canva and PowerDirector.</p>
+                </div>
+            </div>
+        </section>
+        <section id="education">
+            <h2>Education <button class="toggle-btn" data-target="education-content"><span class="material-icons">expand_more</span></button></h2>
+            <div class="content" id="education-content">
+                <div class="education-item">
+                    <h3>Isabela State University 
+                        <a href="https://www.google.com/maps/place/Isabela+State+University+Santiago+Extension/@16.6981594,121.5818172,15.17z/data=!4m14!1m7!3m6!1s0x339007d825c21ea1:0xba7a327357fbf83b!2sIsabela+State+University+Santiago+Extension!8m2!3d16.6979583!4d121.5817845!16s%2Fg%2F11pvhpwkct!3m5!1s0x339007d825c21ea1:0xba7a327357fbf83b!8m2!3d16.6979583!4d121.5817845!16s%2Fg%2F11pvhpwkct?entry=ttu&g_ep=EgoyMDI0MDgyMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="location-icon">
+                            <i class="fa fa-map-pin" aria-hidden="true"></i>
+                        </a>
+                    </h3>
+                    <p><strong>Certificate in Computer Hardware Servicing</strong></p>
+                    <p>2015 - 2016</p>
+                </div>
+                <div class="education-item">
+                    <h3>University of La Salette High School 
+                        <a href="https://www.google.com/maps/place/University+of+La+Salette+High+School+Department/@16.6874112,121.5497677,17z/data=!3m1!4b1!4m6!3m5!1s0x3390061db1cd13c7:0xf6237be634e45057!8m2!3d16.6874112!4d121.5523426!16s%2Fg%2F1tdfkt07?entry=ttu&g_ep=EgoyMDI0MDgyMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="location-icon">
+                            <i class="fa fa-map-pin" aria-hidden="true"></i>
+                        </a>
+                    </h3>
+                    <p><strong>High School Diploma</strong></p>
+                    <p>Graduated: 2007</p>
+                </div>
+            </div>
+        </section>
+        <section id="experience">
+            <h2>Experience <button class="toggle-btn" data-target="experience-content"><span class="material-icons">expand_more</span></button></h2>
+            <div class="content" id="experience-content">
+                <div class="job">
+                    <h3>Web Developer</h3>
+                    <p>Brain IT Consultancy</p>
+                    <p>2018 - March 2024</p>
+                    <p>
+                        Developed secure web applications using <span class="highlight">HTML</span>, 
+                        <span class="highlight">CSS</span>, and <span class="highlight">JavaScript</span>. 
+                        Worked with frameworks like <span class="highlight">Laravel</span> and 
+                        <span class="highlight">CakePHP</span>, and managed databases using 
+                        <span class="highlight">phpMyAdmin</span> with <span class="highlight">XAMPP</span>.
+                    </p>
+                </div>
+                <div class="job">
+                    <h3>Freelance Graphic Artist</h3>
+                    <p>Self-Employed</p>
+                    <p>Ongoing</p>
+                    <p>
+                        Created detailed and engaging visuals through digital artistry in <span class="highlight">Photoshop</span>. 
+                        Excelled in digital art and video editing using tools like <span class="highlight">Canva</span> and 
+                        <span class="highlight">PowerDirector</span>.
+                    </p>
+                </div>
+            </div>
+        </section>
+            <section id="skills">
+    <h2>Skills <button class="toggle-btn" data-target="skills-content"><span class="material-icons">expand_more</span></button></h2>
+    <div class="content" id="skills-content">
+        <div class="skill">
+            <p><i class="fab fa-html5"></i> HTML</p>
+            <div class="progress-bar">
+                <div class="progress" data-width="85%"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <p><i class="fab fa-css3-alt"></i> CSS</p>
+            <div class="progress-bar">
+                <div class="progress" data-width="85%"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <p><i class="fab fa-js"></i> JavaScript</p>
+            <div class="progress-bar">
+                <div class="progress" data-width="70%"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <p>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+                    <path d="M20.03,3.41C19.4,2.78,18.53,2.5,17.69,2.5H6.31C5.47,2.5,4.6,2.78,3.97,3.41C3.33,4.05,3,4.93,3,5.83V18.17C3,19.07,3.33,19.95,3.97,20.59C4.6,21.22,5.47,21.5,6.31,21.5H17.69C18.53,21.5,19.4,21.22,20.03,20.59C20.67,19.95,21,19.07,21,18.17V5.83C21,4.93,20.67,4.05,20.03,3.41ZM17.69,20H6.31C5.57,20,4.87,19.79,4.28,19.39C3.7,18.99,3.19,18.21,3.02,17.33H15V15.59H6V11.41H15V9.83H6V5.83H17.69C18.43,5.83,19.12,6.04,19.72,6.44C20.31,6.85,20.82,7.63,20.97,8.51H10V10.24H17.69C18.43,10.24,19.12,10.46,19.72,10.86C20.31,11.27,20.82,12.05,20.97,12.93H10V15.59H17.69V20Z"/>
+                </svg> Photoshop
+            </p>
+            <div class="progress-bar">
+                <div class="progress" data-width="90%"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <p><i class="fas fa-film"></i> Video Editing</p>
+            <div class="progress-bar">
+                <div class="progress" data-width="80%"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <p><i class="fas fa-video"></i> Power Director</p>
+            <div class="progress-bar">
+                <div class="progress" data-width="80%"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <p><i class="fas fa-palette"></i> Canva</p>
+            <div class="progress-bar">
+                <div class="progress" data-width="85%"></div>
+            </div>
+        </div>
+    </div>
+</section>
+       <section id="projects">
+            <h2>Projects <button class="toggle-btn" data-target="projects-content"><span class="material-icons">expand_more</span></button></h2>
+            <div class="content" id="projects-content">
+                <div class="project">
+                    <h3>Confidential Project - Web Application</h3>
+                    <p>Developed a secure web application using modern front-end technologies and frameworks.</p>
+                    <p>Key technologies used: <span class="highlight">HTML</span>, <span class="highlight">CSS</span>, <span class="highlight">JavaScript</span>, <span class="highlight">Laravel</span>, <span class="highlight">CakePHP</span>, <span class="highlight">phpMyAdmin</span>, <span class="highlight">XAMPP</span>.</p>
+                    <p>Role: Implemented front-end features and collaborated with team members to ensure project requirements were met.</p>
+                </div>
+                <div class="project">
+                    <h3>Confidential Project - Data Visualization Tool</h3>
+                    <p>Contributed to the development of a data visualization tool focusing on effective data representation.</p>
+                    <p>Technologies utilized: <span class="highlight">JavaScript</span>, various data handling libraries.</p>
+                    <p>Role: Assisted in front-end development and integration of data visualization components.</p>
+                </div>
+                <div class="project">
+                    <h3>Freelance Graphic Artist Projects</h3>
+                    <p>Created engaging visuals and multimedia content for various clients.</p>
+                    <p>Key tools used: <span class="highlight">Adobe Photoshop</span>, <span class="highlight">Canva</span>, <span class="highlight">PowerDirector</span>.</p>
+                    <p>Role: Developed digital art, promotional materials, and video content based on client specifications.</p>
+                </div>
+            </div>
+        </section>
+ <section id="graphics">
+    <h2>Graphics Portfolio 
+        <button class="toggle-btn" data-target="graphics-content">
+            <span class="material-icons">expand_more</span>
+        </button>
+    </h2>
+    <div class="content" id="graphics-content">
+        <div class="album" data-album="Infographics">
+            <h3>Infographics</h3>
+            <div class="album-images">
+                <img src="img/1.jpeg" alt="Infographic Image 1" class="album-image">
+                <img src="img/2.jpeg" alt="Infographic Image 2" class="album-image">
+                <img src="img/3.png" alt="Infographic Image 3" class="album-image">
+                <!-- Add more images as needed -->
+            </div>
+        </div>
+        <div class="album" data-album="Logo Design">
+            <h3>Logo Design</h3>
+            <div class="album-images">
+                <img src="img/4.jpeg" alt="Logo Design Image 1" class="album-image">
+                <img src="img/5.jpeg" alt="Logo Design Image 2" class="album-image">
+                <img src="img/6.jpeg" alt="Logo Design Image 3" class="album-image">
+                <!-- Add more images as needed -->
+            </div>
+        </div>
+        <div class="album" data-album="Icon Design">
+            <h3>Icon Design</h3>
+            <div class="album-images">
+                <img src="img/14.png" alt="Icon Design Image 1" class="album-image">
+                <img src="img/15.png" alt="Icon Design Image 2" class="album-image">
+                <img src="img/16.png" alt="Icon Design Image 3" class="album-image">
+                <img src="img/17.png" alt="Icon Design Image 4" class="album-image">
+                <img src="img/18.png" alt="Icon Design Image 5" class="album-image">
+                <img src="img/19.png" alt="Icon Design Image 6" class="album-image">
+                <!-- Add more images as needed -->
+            </div>
+        </div>
+        <div class="album" data-album="Digital Art Pet">
+            <h3>Digital Art Pet</h3>
+            <div class="album-images">
+                <img src="img/7.jpeg" alt="Digital Art Pet Image 1" class="album-image">
+                <img src="img/8.jpeg" alt="Digital Art Pet Image 2" class="album-image">
+                <img src="img/9.jpeg" alt="Digital Art Pet Image 3" class="album-image">
+                <!-- Add more images as needed -->
+            </div>
+        </div>
+        <div class="album" data-album="Digital Art">
+            <h3>Digital Art</h3>
+            <div class="album-images">
+                <img src="img/10.jpeg" alt="Digital Art Image 1" class="album-image">
+                <img src="img/11.jpeg" alt="Digital Art Image 2" class="album-image">
+                <img src="img/12.jpeg" alt="Digital Art Image 3" class="album-image">
+                <img src="img/13.jpeg" alt="Digital Art Image 4" class="album-image">
+                <!-- Add more images as needed -->
+            </div>
+        </div>
+    </div>
+</section>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <ul class="contact-list">
+            <li>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:janorestestrinidad@gmail.com">janorestestrinidad@gmail.com</a>
+            </li>
+            <li>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+1(929)687-587">+1(929)687-587</a>
+            </li>
+        </ul>
+        <div class="location">
+            <i class="fas fa-map-marker-alt"></i>
+            Ocean Avenue, Brooklyn, NY 11230
+        </div>
+    </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
