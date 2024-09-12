@@ -309,7 +309,7 @@ Furthermore, I have a passion for creating impactful multimedia experiences thro
     // Contact Me
     addSectionTitle('Contact Info');
     addText('Email: janorestestrinidad@gmail.com', 12);
-    addText('Phone: +1(929)687-587', 12);
+    addText('Phone: +1(929)687-7587', 12);
     addText('Address: Brooklyn, NY', 12);
 
     // Save the PDF
